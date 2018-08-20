@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -9,8 +10,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox focusTraversable="true" layoutX="80.0" layoutY="54.0" prefHeight="316.0" prefWidth="438.0">
+      <VBox focusTraversable="true" layoutX="80.0" layoutY="5.0" prefHeight="383.0" prefWidth="438.0">
          <children>
+            <HBox alignment="BASELINE_CENTER" focusTraversable="true" prefHeight="71.0" prefWidth="438.0">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <children>
+                  <Label prefHeight="27.0" prefWidth="90.0" text="REGISTRO">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
             <HBox focusTraversable="true" prefHeight="37.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="24.0" prefWidth="68.0" text="Nombre: " />
@@ -44,13 +57,13 @@
                   <TextField fx:id="clave" prefHeight="25.0" prefWidth="202.0" />
                </children>
             </HBox>
-            <HBox prefHeight="91.0" prefWidth="438.0">
+            <HBox prefHeight="73.0" prefWidth="438.0">
                <children>
                   <CheckBox fx:id="vendedor" mnemonicParsing="false" prefHeight="17.0" prefWidth="117.0" text="Vendedor" />
                   <CheckBox fx:id="administrador" mnemonicParsing="false" text="Administrador" />
                </children>
             </HBox>
-            <Button fx:id="guardar" mnemonicParsing="false" onAction="#handleButtonAction" text="Guardar" />
+            <Button fx:id="guardar" mnemonicParsing="false" text="Guardar" />
          </children>
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
