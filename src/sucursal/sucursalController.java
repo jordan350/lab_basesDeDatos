@@ -1,4 +1,4 @@
-package Controlador;
+package sucursal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -35,7 +35,7 @@ public class sucursalController implements Initializable {
       
        Stage registro = new Stage();
        FXMLLoader loader = new FXMLLoader();
-       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("reportes.fxml").openStream());
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("Reportes.fxml").openStream());
        Scene ac = new Scene(root);
        registro.setScene(ac);
        registro.show();
