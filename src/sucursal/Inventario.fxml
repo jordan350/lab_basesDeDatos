@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sucursal.InventarioController">
+   <children>
+      <VBox layoutX="34.0" layoutY="23.0" prefHeight="348.0" prefWidth="539.0">
+         <children>
+            <HBox alignment="BASELINE_CENTER" prefHeight="58.0" prefWidth="539.0">
+               <children>
+                  <Label text="INVENTARIO">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="539.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="96.0" text="Nombre: " />
+                  <TextField fx:id="nombre" prefHeight="25.0" prefWidth="183.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="539.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="97.0" text="Id: " />
+                  <TextField fx:id="id" prefHeight="25.0" prefWidth="181.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="539.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="99.0" text="Precio: " />
+                  <TextField fx:id="dinero" prefHeight="25.0" prefWidth="180.0" />
+               </children>
+            </HBox>
+            <TableView prefHeight="129.0" prefWidth="539.0">
+              <columns>
+                <TableColumn fx:id="table" prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="75.0" text="Precio" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="63.0" prefWidth="539.0" spacing="70.0">
+               <children>
+                  <Button fx:id="guardar" mnemonicParsing="false" onAction="#Guardar_Producto" text="Guardar" />
+                  <Button fx:id="mostrar" mnemonicParsing="false" onAction="#Mostrar_Productos" text="Mostrar" />
+                  <Button fx:id="salir" mnemonicParsing="false" onAction="#Salir_interfaz" text="Salir" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
