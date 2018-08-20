@@ -1,11 +1,9 @@
-package sucursal;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package sucursal;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,26 +19,27 @@ import javafx.scene.control.TextField;
  *
  * @author pc
  */
-public class RegistroController implements Initializable {
+public class Registro2Controller implements Initializable {
 
-   @FXML private TextField nombre;
-   @FXML private TextField apellido;
-   @FXML private TextField id;
-   @FXML private TextField usuario;
-   @FXML private TextField clave;
-   
-   @FXML private CheckBox vendedor;
-   @FXML private CheckBox administrador;
-   
-   @FXML private Button guardar;
-   
-   @FXML
-   private void guardar_registro(ActionEvent event){
-   //
-   }
+    @FXML private TextField nombre;
+    @FXML private TextField apellido;
+    @FXML private TextField id;
+    @FXML private TextField usuario;
+    @FXML private TextField clave;
+    
+    @FXML private CheckBox vendedor;
+    @FXML private CheckBox administrador;
+    
+    @FXML private Button guardar;
+    
+    @FXML
+    private void guardar_registro(ActionEvent event){
+    
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        // TODO
     }    
     
 }

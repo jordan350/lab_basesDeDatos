@@ -27,10 +27,12 @@ public class CajaController implements Initializable {
      @FXML private TextField id_cliente;
      @FXML private TextField dinero;
      
+     @FXML private Button carro;
+     
      @FXML private TableView table;
+     
      @FXML private Label total;
      
-     @FXML private Button carro;
      @FXML private Button registrar;
      @FXML private Button cancelar;
     
