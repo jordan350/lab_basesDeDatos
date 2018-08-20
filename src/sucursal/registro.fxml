@@ -14,7 +14,7 @@
             <HBox focusTraversable="true" prefHeight="37.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="24.0" prefWidth="68.0" text="Nombre: " />
-                  <TextField prefHeight="25.0" prefWidth="200.0" />
+                  <TextField fx:id="nombre" prefHeight="25.0" prefWidth="200.0" />
                </children>
                <opaqueInsets>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -23,34 +23,34 @@
             <HBox prefHeight="36.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="68.0" text="Apellido: " />
-                  <TextField prefHeight="25.0" prefWidth="202.0" />
+                  <TextField fx:id="apellido" prefHeight="25.0" prefWidth="202.0" />
                </children>
             </HBox>
             <HBox prefHeight="37.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="68.0" text="Id: " />
-                  <TextField prefHeight="25.0" prefWidth="201.0" />
+                  <TextField fx:id="id" prefHeight="25.0" prefWidth="201.0" />
                </children>
             </HBox>
             <HBox prefHeight="37.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="66.0" text="Usuario: " />
-                  <TextField prefHeight="25.0" prefWidth="203.0" />
+                  <TextField fx:id="usuario" prefHeight="25.0" prefWidth="203.0" />
                </children>
             </HBox>
             <HBox prefHeight="61.0" prefWidth="438.0">
                <children>
                   <Label prefHeight="17.0" prefWidth="65.0" text="Clave: " />
-                  <TextField prefHeight="25.0" prefWidth="202.0" />
+                  <TextField fx:id="clave" prefHeight="25.0" prefWidth="202.0" />
                </children>
             </HBox>
             <HBox prefHeight="91.0" prefWidth="438.0">
                <children>
-                  <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="117.0" text="Vendedor" />
-                  <CheckBox mnemonicParsing="false" text="Administrador" />
+                  <CheckBox fx:id="vendedor" mnemonicParsing="false" prefHeight="17.0" prefWidth="117.0" text="Vendedor" />
+                  <CheckBox fx:id="administrador" mnemonicParsing="false" text="Administrador" />
                </children>
             </HBox>
-            <Button mnemonicParsing="false" text="Guardar" />
+            <Button fx:id="guardar" mnemonicParsing="false" onAction="#handleButtonAction" text="Guardar" />
          </children>
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
