@@ -7,8 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sucursal.Registro2Controller">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sucursal.Registro2Controller">
    <children>
       <VBox layoutX="54.0" layoutY="17.0" prefHeight="362.0" prefWidth="503.0">
          <children>
@@ -57,9 +56,10 @@
                   <CheckBox fx:id="administrador" mnemonicParsing="false" text="Administrador" />
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="503.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="503.0" spacing="50.0">
                <children>
                   <Button fx:id="guardar" mnemonicParsing="false" onAction="#guardar_registro" text="Guardar" />
+                  <Button fx:id="Salir" mnemonicParsing="false" onAction="#Salir" text="Salir" />
                </children>
             </HBox>
          </children>

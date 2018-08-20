@@ -34,20 +34,37 @@ public class sucursalController implements Initializable {
     
     @FXML private Button entrar;
     @FXML private Button salir;
-    
+    @FXML private Button Registrar;
     sucursalController sc;
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
       
-       Stage registro = new Stage();
+       Stage stage = (Stage) salir.getScene().getWindow();
+       stage.close();
+       Stage caja = new Stage();
        FXMLLoader loader = new FXMLLoader();
-       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("invent2.fxml").openStream());
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("inter2.fxml").openStream());
        Scene ac = new Scene(root);
-       registro.setScene(ac);
-       registro.show();
+       caja.setScene(ac);
+       caja.show();
+       
     }
     @FXML
     private void Salir_api(ActionEvent event){
+    Stage stage = (Stage) salir.getScene().getWindow();
+       stage.close();
+    }
+    @FXML
+    private void Ir_Registro(ActionEvent event) throws IOException{
+    Stage stage = (Stage) Registrar.getScene().getWindow();
+       stage.close();
+        Stage registro = new Stage();
+       FXMLLoader loader = new FXMLLoader();
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("registro2.fxml").openStream());
+       Scene ac = new Scene(root);
+       registro.setScene(ac);
+       registro.show();
+    
     }
     
     @Override

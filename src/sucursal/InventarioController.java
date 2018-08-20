@@ -5,14 +5,19 @@
  */
 package sucursal;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -53,7 +58,16 @@ public class InventarioController implements Initializable {
     }
 
     @FXML
-    private void Volver(ActionEvent event) {
+    private void Volver(ActionEvent event) throws IOException {
+       Stage stage = (Stage) salir.getScene().getWindow();
+       stage.close();
+       Stage inter = new Stage();
+       FXMLLoader loader = new FXMLLoader();
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("inter2.fxml").openStream());
+       Scene ac = new Scene(root);
+       inter.setScene(ac);
+       inter.show();
+    
     }
     
 }

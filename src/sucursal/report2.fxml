@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
@@ -16,7 +21,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.CumplimientoMetaController">
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.CumplimientoMetaController">
    <children>
       <TabPane layoutY="31.0" prefHeight="542.0" prefWidth="827.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -35,8 +40,8 @@
                                           <TableColumn fx:id="Cporcentajeproducto" editable="false" prefWidth="96.0" text="Porcentaje" />
                                        </columns>
                                     </TableView>
-                                    <Button fx:id="actualizarproducto" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" text="actualizar tabla" />
-                                    <Button fx:id="Bgraficarproduco" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" text="graficar de la tabla" />
+                                    <Button fx:id="actualizarproducto" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#Actualizar_tabla_VP" text="actualizar tabla" />
+                                    <Button fx:id="Bgraficarproduco" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" onAction="#graficar_tabla_VP" text="graficar de la tabla" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="509.0">
@@ -64,8 +69,8 @@
                                           <TableColumn fx:id="Cporcentajevendedor" editable="false" prefWidth="74.0" text="Porcentaje" />
                                        </columns>
                                     </TableView>
-                                    <Button fx:id="Bactualizarvendedor" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" text="actualizar tabla" />
-                                    <Button fx:id="Bgraficarvendedor" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" text="graficar de la tabla" />
+                                    <Button fx:id="Bactualizarvendedor" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#Actualizar_tabla_VV" text="actualizar tabla" />
+                                    <Button fx:id="Bgraficarvendedor" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" onAction="#graficar_tabla_VV" text="graficar de la tabla" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="509.0">
@@ -99,8 +104,8 @@
                                           <TableColumn fx:id="Cventasevolucion" editable="false" prefWidth="155.0" text="Ventas" />
                                        </columns>
                                     </TableView>
-                                    <Button fx:id="actualizarevolucion" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" text="actualizar tabla" />
-                                    <Button fx:id="Bgraficarevolucion" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" text="graficar de la tabla" />
+                                    <Button fx:id="actualizarevolucion" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#Actualizar_tabla_EV" text="actualizar tabla" />
+                                    <Button fx:id="Bgraficarevolucion" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" onAction="#graficar_tabla_EV" text="graficar de la tabla" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="509.0">
@@ -137,8 +142,8 @@
                                           <TableColumn fx:id="Ccolormetas" editable="false" prefWidth="57.0" text="color" />
                                       </columns>
                                     </TableView>
-                                    <Button fx:id="Bactualizarmetas" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" text="actualizar tabla" />
-                                    <Button fx:id="Bgraficarmetas" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" text="graficar de la tabla" />
+                                    <Button fx:id="Bactualizarmetas" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#Actualizar_tabla_CM" text="actualizar tabla" />
+                                    <Button fx:id="Bgraficarmetas" layoutX="142.0" layoutY="453.0" mnemonicParsing="false" onAction="#graficar_tabla_CM" text="graficar de la tabla" />
                                  </children>
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="509.0">
@@ -161,14 +166,14 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="137.0" text="Reportes" textFill="#0d0ddd">
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="137.0" text="Reportes">
          <font>
-            <Font name="Copperplate Gothic Light" size="12.0" />
+            <Font name="Copperplate Gothic Light" size="18.0" />
          </font></Label>
-      <Label layoutX="220.0" layoutY="14.0" text="usuario:    " />
-      <Label fx:id="LBrol" layoutX="420.0" layoutY="14.0" text="adminstrador" textFill="#0beb2c" />
-      <Label layoutX="395.0" layoutY="14.0" text="rol:" />
-      <Label fx:id="LBusuario" layoutX="268.0" layoutY="14.0" text="----" />
-      <Button fx:id="Bvolver" layoutX="814.0" layoutY="561.0" mnemonicParsing="false" text="volver" textFill="#dd0a0a" />
+      <HBox alignment="BOTTOM_CENTER" layoutX="754.0" layoutY="559.0" prefHeight="33.0" prefWidth="86.0">
+         <children>
+            <Button fx:id="salir" mnemonicParsing="false" onAction="#Salir_int" prefHeight="18.0" prefWidth="68.0" text="Salir" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
