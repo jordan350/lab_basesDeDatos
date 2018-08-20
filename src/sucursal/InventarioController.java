@@ -36,8 +36,15 @@ public class InventarioController implements Initializable {
     @FXML
     private Button salir;
 
-    
-     @FXML
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+
+    @FXML
     private void Guardar_Producto(ActionEvent event) {
     }
 
@@ -48,12 +55,5 @@ public class InventarioController implements Initializable {
     @FXML
     private void Volver(ActionEvent event) {
     }
-   
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-
-   
     
 }
