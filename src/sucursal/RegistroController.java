@@ -35,24 +35,12 @@ public class RegistroController implements Initializable {
    @FXML private Button guardar;
    
    @FXML
-   private void handleButtonAction(ActionEvent event){
-   
-       String Nombre = nombre.getText();
-       String Apellido = nombre.getText();
-       String Usuario = nombre.getText();
-       String Clave = nombre.getText();
-       int Id = Integer.parseInt(id.getText());
-       
-       if (vendedor.isDisable()) {
-           administrador.isDisabled();
-       }else{
-           vendedor.isDisabled();
-           administrador.isDisable();
-       }
+   private void guardar_registro(ActionEvent event){
+   //
    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }    
     
 }
