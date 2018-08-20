@@ -15,7 +15,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -26,8 +29,11 @@ import javafx.stage.Stage;
  */
 public class sucursalController implements Initializable {
     
-    @FXML
-    private Label label;
+    @FXML private TextField usuario;
+    @FXML private PasswordField clave;
+    
+    @FXML private Button entrar;
+    @FXML private Button salir;
     
     sucursalController sc;
     @FXML
@@ -39,6 +45,9 @@ public class sucursalController implements Initializable {
        Scene ac = new Scene(root);
        registro.setScene(ac);
        registro.show();
+    }
+    @FXML
+    private void Salir_api(ActionEvent event){
     }
     
     @Override
