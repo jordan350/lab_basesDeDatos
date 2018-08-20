@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -26,7 +27,7 @@ public class InventarioController implements Initializable {
     @FXML private TextField id;
     @FXML private TextField dinero;
     
-    @FXML private TableView table;
+    @FXML private TableColumn<?, ?> table;
     
     @FXML private Button guardar;
     @FXML private Button mostrar;

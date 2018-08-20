@@ -22,34 +22,43 @@ import javafx.scene.control.TextField;
  */
 public class CajaController implements Initializable {
 
-     @FXML private TextField id;
-     @FXML private TextField nombre;
-     @FXML private TextField id_cliente;
-     @FXML private TextField dinero;
-     
-     @FXML private Button carro;
-     
-     @FXML private TableView table;
-     
-     @FXML private Label total;
-     
-     @FXML private Button registrar;
-     @FXML private Button cancelar;
-    
-      @FXML
-   private void Mostrar_Carro(ActionEvent event){
-   //recordar que al mostrar el carro, se ponga el total sobre el albel "total", para mostrar en pantalla
-   }
-     @FXML
-   private void Registrar_Venta(ActionEvent event){
-   
-   }
-     @FXML
-   private void Cancelar_Venta(ActionEvent event){
-   }
+    @FXML
+    private TextField id;
+    @FXML
+    private TextField nombre;
+    @FXML
+    private TextField id_cliente;
+    @FXML
+    private TextField dinero;
+    @FXML
+    private Button carro;
+    @FXML
+    private TableView<?> table;
+    @FXML
+    private Label total;
+    @FXML
+    private Button registrar;
+    @FXML
+    private Button cancelar;
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        // TODO
     }    
+
+    @FXML
+    private void Mostrar_Carro(ActionEvent event) {
+    }
+
+    @FXML
+    private void Registrar_Venta(ActionEvent event) {
+    }
+
+    @FXML
+    private void Cancelar_Venta(ActionEvent event) {
+    }
     
 }

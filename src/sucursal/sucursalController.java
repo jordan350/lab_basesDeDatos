@@ -35,7 +35,7 @@ public class sucursalController implements Initializable {
       
        Stage registro = new Stage();
        FXMLLoader loader = new FXMLLoader();
-       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("registro2.fxml").openStream());
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("inventario.fxml").openStream());
        Scene ac = new Scene(root);
        registro.setScene(ac);
        registro.show();
