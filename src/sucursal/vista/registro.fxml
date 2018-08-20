@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox focusTraversable="true" layoutX="80.0" layoutY="54.0" prefHeight="316.0" prefWidth="438.0">
+         <children>
+            <HBox focusTraversable="true" prefHeight="37.0" prefWidth="438.0">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="68.0" text="Nombre: " />
+                  <TextField prefHeight="25.0" prefWidth="200.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="438.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="68.0" text="Apellido: " />
+                  <TextField prefHeight="25.0" prefWidth="202.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="438.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="68.0" text="Id: " />
+                  <TextField prefHeight="25.0" prefWidth="201.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="438.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="66.0" text="Usuario: " />
+                  <TextField prefHeight="25.0" prefWidth="203.0" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>
