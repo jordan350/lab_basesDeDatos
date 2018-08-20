@@ -7,7 +7,9 @@ package sucursal.controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -16,9 +18,13 @@ import javafx.fxml.Initializable;
  */
 public class RegistroController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+   @FXML private TextField nombre;
+   @FXML private TextField apellido;
+   @FXML private TextField id;
+   @FXML private TextField usuario;
+   @FXML private TextField clave;
+   
+   @FXML private 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
