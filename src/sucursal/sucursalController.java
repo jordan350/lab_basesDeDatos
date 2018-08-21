@@ -38,7 +38,8 @@ public class sucursalController implements Initializable {
     sucursalController sc;
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
-      
+      //falta un condicional para saber que tipo de usuario es, con eso variar la siguiente vista
+      //pudeser la que esta o la de caja
        Stage stage = (Stage) salir.getScene().getWindow();
        stage.close();
        Stage caja = new Stage();

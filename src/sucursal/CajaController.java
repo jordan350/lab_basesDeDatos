@@ -61,7 +61,16 @@ public class CajaController implements Initializable {
     }
 
     @FXML
-    private void Registrar_Venta(ActionEvent event) {
+    private void Registrar_Venta(ActionEvent event) throws IOException {
+    Stage stage = (Stage) registrar.getScene().getWindow();
+        stage.close();
+        Stage dc = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane root = (AnchorPane) loader.load(getClass().getResource("fact.fxml").openStream());
+        Scene ac = new Scene(root);
+        dc.setScene(ac);
+        dc.show();
+
     }
 
     @FXML
