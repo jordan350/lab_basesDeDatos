@@ -39,8 +39,15 @@ public class Registro2Controller implements Initializable {
     @FXML private Button Salir;
     
     @FXML
-    private void guardar_registro(ActionEvent event){
-    
+    private void guardar_registro(ActionEvent event) throws IOException{
+     Stage stage = (Stage) guardar.getScene().getWindow();
+       stage.close();
+       Stage suc = new Stage();
+       FXMLLoader loader = new FXMLLoader();
+       AnchorPane root = (AnchorPane)loader.load(getClass().getResource("sucursal.fxml").openStream());
+       Scene ac = new Scene(root);
+       suc.setScene(ac);
+       suc.show();
     }
     @FXML
     private void Salir(ActionEvent event) throws IOException{

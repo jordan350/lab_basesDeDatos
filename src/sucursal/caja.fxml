@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="717.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sucursal.CajaController">
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sucursal.CajaController">
    <children>
       <VBox layoutX="43.0" layoutY="18.0" prefHeight="434.0" prefWidth="625.0">
          <children>
@@ -67,6 +66,7 @@
                   <Label fx:id="total" prefHeight="35.0" prefWidth="129.0" />
                   <Button fx:id="registrar" mnemonicParsing="false" onAction="#Registrar_Venta" prefHeight="25.0" prefWidth="79.0" text="Registrar" />
                   <Button fx:id="cancelar" mnemonicParsing="false" onAction="#Cancelar_Venta" prefHeight="25.0" prefWidth="80.0" text="Cancelar" />
+                  <Button fx:id="salir" mnemonicParsing="false" onAction="#Volver" prefHeight="25.0" prefWidth="76.0" text="Salir" />
                </children>
                <opaqueInsets>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
