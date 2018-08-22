@@ -21,7 +21,7 @@ public class Sucursal extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sucursal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("caja.fxml"));
         
         Scene scene = new Scene(root);
         

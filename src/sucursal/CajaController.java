@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -40,6 +41,12 @@ public class CajaController implements Initializable {
     @FXML
     private TableView<?> table;
     @FXML
+    private TableColumn<?, ?> nombre_tab;
+    @FXML
+    private TableColumn<?, ?> precio_tab;
+    @FXML
+    private TableColumn<?, ?> codigo_de_barras_tabl;
+    @FXML
     private Label total;
     @FXML
     private Button registrar;
@@ -61,16 +68,7 @@ public class CajaController implements Initializable {
     }
 
     @FXML
-    private void Registrar_Venta(ActionEvent event) throws IOException {
-    Stage stage = (Stage) registrar.getScene().getWindow();
-        stage.close();
-        Stage dc = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        AnchorPane root = (AnchorPane) loader.load(getClass().getResource("fact.fxml").openStream());
-        Scene ac = new Scene(root);
-        dc.setScene(ac);
-        dc.show();
-
+    private void Registrar_Venta(ActionEvent event) {
     }
 
     @FXML
@@ -79,14 +77,15 @@ public class CajaController implements Initializable {
 
     @FXML
     private void Volver(ActionEvent event) throws IOException {
-     Stage stage = (Stage) salir.getScene().getWindow();
+    Stage stage = (Stage) salir.getScene().getWindow();
        stage.close();
-       Stage suc = new Stage();
+       Stage inter = new Stage();
        FXMLLoader loader = new FXMLLoader();
        AnchorPane root = (AnchorPane)loader.load(getClass().getResource("sucursal.fxml").openStream());
        Scene ac = new Scene(root);
-       suc.setScene(ac);
-       suc.show();
+       inter.setScene(ac);
+       inter.show();
+    
     }
     
 }

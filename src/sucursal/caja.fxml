@@ -53,8 +53,9 @@
             </HBox>
             <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Nombre" />
-                <TableColumn prefWidth="75.0" text="Precio" />
+                <TableColumn fx:id="nombre_tab" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="precio_tab" prefWidth="75.0" text="Precio" />
+                  <TableColumn fx:id="codigo_de_barras_tabl" prefWidth="75.0" text="Codigo de Barras" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
