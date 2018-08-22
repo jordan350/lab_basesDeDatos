@@ -73,7 +73,7 @@ public class Inter2Controller implements Initializable {
         stage.close();
         Stage invent = new Stage();
         FXMLLoader loader = new FXMLLoader();
-        AnchorPane root = (AnchorPane) loader.load(getClass().getResource("invent2.fxml").openStream());
+        AnchorPane root = (AnchorPane) loader.load(getClass().getResource("invent3.fxml").openStream());
         Scene ac = new Scene(root);
         invent.setScene(ac);
         invent.show();

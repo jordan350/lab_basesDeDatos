@@ -14,7 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -22,9 +22,9 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author pc
+ * @author Labing
  */
-public class InventarioController implements Initializable {
+public class Invent3Controller implements Initializable {
 
     @FXML
     private TextField nombre;
@@ -33,7 +33,15 @@ public class InventarioController implements Initializable {
     @FXML
     private TextField precio;
     @FXML
-    private TableView<?> table;
+    private TextField cantidad;
+    @FXML
+    private TableColumn<?, ?> nombre_tab;
+    @FXML
+    private TableColumn<?, ?> id_tab;
+    @FXML
+    private TableColumn<?, ?> precio_tab;
+    @FXML
+    private TableColumn<?, ?> cantidad_tab;
     @FXML
     private Button guardar;
     @FXML
@@ -50,24 +58,23 @@ public class InventarioController implements Initializable {
     }    
 
     @FXML
-    private void Guardar_Producto(ActionEvent event) {
+    private void Guardar_producto(ActionEvent event) {
     }
 
     @FXML
-    private void Mostrar_Productos(ActionEvent event) {
+    private void mostrar_productos(ActionEvent event) {
     }
 
     @FXML
     private void Volver(ActionEvent event) throws IOException {
-       Stage stage = (Stage) salir.getScene().getWindow();
+     Stage stage = (Stage) salir.getScene().getWindow();
        stage.close();
-       Stage inter = new Stage();
+       Stage suc = new Stage();
        FXMLLoader loader = new FXMLLoader();
        AnchorPane root = (AnchorPane)loader.load(getClass().getResource("inter2.fxml").openStream());
        Scene ac = new Scene(root);
-       inter.setScene(ac);
-       inter.show();
-    
+       suc.setScene(ac);
+       suc.show();
     }
     
 }
